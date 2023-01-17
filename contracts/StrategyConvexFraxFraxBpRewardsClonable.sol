@@ -265,7 +265,7 @@ abstract contract StrategyConvexBase is BaseStrategy {
     }
 }
 
-contract StrategyConvexFraxBpRewardsClonable is StrategyConvexBase {
+contract StrategyConvexFraxFraxBpRewardsClonable is StrategyConvexBase {
     /* ========== STATE VARIABLES ========== */
     // these will likely change across different wants.
 
@@ -313,7 +313,7 @@ contract StrategyConvexFraxBpRewardsClonable is StrategyConvexBase {
     event Cloned(address indexed clone);
 
     // we use this to clone our original strategy to other vaults
-    function cloneConvexFraxBpRewards(
+    function cloneConvexFraxFraxBpRewards(
         address _vault,
         address _strategist,
         address _rewards,
@@ -340,7 +340,7 @@ contract StrategyConvexFraxBpRewardsClonable is StrategyConvexBase {
             newStrategy := create(0, clone_code, 0x37)
         }
 
-        StrategyConvexFraxBpRewardsClonable(newStrategy).initialize(
+        StrategyConvexFraxFraxBpRewardsClonable(newStrategy).initialize(
             _vault,
             _strategist,
             _rewards,
